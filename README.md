@@ -1,5 +1,8 @@
 # misctools
 
+
+[snapshot.pdf](https://github.com/tetsushiwahaha/misctools/files/5194180/snapshot.pdf)
+
 このリポジトリにはウエタ研の研究に必要な雑多なツールを置いておくことにす
 る．適当な頻度で更新される．
 
@@ -110,3 +113,25 @@ pdf.close()
 
 plt.show()
 ```
+## スライド作成用テンプレート `slide.tex` `Makefile.xelatex`
+
+### 必要なもの
+* TeXLive を入れてあれば特に問題ない
+
+### 使い方
+* `Makefile.xelatex` は適当なディレクトリで`Makefile`として置いておく．
+* `slide.tex` を適当にエディットする．
+* 発表用スライドにデザインされた，`beamer` というクラスを用いて，
+2つのテーマ，`metropolis` および `focus` 用に例題を記述しておいた．
+
+
+## ちょっとした資料用テンプレート `docsample.tex`
+
+### 必要なもの
+* TeXLive を入れてあれば特に問題ない
+
+### 使い方
+
+* `platex`  でコンパイルする用に記述してある．`dvipdfmx` によってPDFを
+生成させる必要がある．
+
