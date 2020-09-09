@@ -10,9 +10,11 @@
 * 人の手を入れない
 * PDF生成
 
-である．（捏造にならない）凝ったアレンジは生成したPDFに対して
-illustrator等を用いて実現する．Python で念入りにコーディングすれば，
+である．（捏造にならない程度の）凝ったアレンジは，
+生成したPDFに対してillustrator等を適用して実現する．しかし，
+Python で念入りにコーディングすれば，
 illustratorも要らないとは思う．
+
 ところで以下の3つの図の違いが判るだろうか？
 
 <img align="center" width="512" alt="a screen shot" src="https://user-images.githubusercontent.com/52724526/92588793-806f7c80-f2d4-11ea-87c8-5f35952fae34.png">
