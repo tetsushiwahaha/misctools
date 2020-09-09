@@ -1,7 +1,7 @@
 # misctools
 
 
-[snapshot.pdf](https://github.com/tetsushiwahaha/misctools/files/5194180/snapshot.pdf)
+<img align="center" width="256" alt="a screen shot" src="https://github.com/tetsushiwahaha/misctools/files/5194180/snapshot.pdf">
 
 このリポジトリにはウエタ研の研究に必要な雑多なツールを置いておくことにす
 る．適当な頻度で更新される．
