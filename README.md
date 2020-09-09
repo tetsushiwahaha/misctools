@@ -5,7 +5,15 @@
 
 ## グラフ作成用スクリプト `plot_file.py` `plot_func.py`
 
-そもそも，以下の3つの図の違いが判るだろうか？
+コンセプトは，
+* 再現可能
+* 人の手を入れない
+* PDF生成
+
+である．（捏造にならない）凝ったアレンジは生成したPDFに対して
+illustrator等を用いて実現する．Python で念入りにコーディングすれば，
+illustratorも要らないとは思う．
+ところで以下の3つの図の違いが判るだろうか？
 
 <img align="center" width="512" alt="a screen shot" src="https://user-images.githubusercontent.com/52724526/92588793-806f7c80-f2d4-11ea-87c8-5f35952fae34.png">
 <img align="center" width="512" alt="a screen shot" src="https://user-images.githubusercontent.com/52724526/92586600-6b451e80-f2d1-11ea-833c-0495df82254d.png">
