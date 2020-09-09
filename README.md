@@ -1,12 +1,10 @@
 # misctools
 
-
-<img align="center" width="256" alt="a screen shot" src="https://user-images.githubusercontent.com/52724526/92586600-6b451e80-f2d1-11ea-833c-0495df82254d.png">
-
 このリポジトリにはウエタ研の研究に必要な雑多なツールを置いておくことにす
 る．適当な頻度で更新される．
 
 ## グラフ作成用スクリプト `plot_file.py` `plot_func.py`
+<img align="center" width="512" alt="a screen shot" src="https://user-images.githubusercontent.com/52724526/92586600-6b451e80-f2d1-11ea-833c-0495df82254d.png">
 
 ### 必要なもの
 * python 3.8 or later
@@ -113,17 +111,26 @@ pdf.close()
 
 plt.show()
 ```
-## スライド作成用テンプレート `slide.tex` `Makefile.xelatex`
+## スライド作成用テンプレート `slide.tex` 
 
 ### 必要なもの
 * TeXLive を入れてあれば特に問題ない
 
 ### 使い方
-* `Makefile.xelatex` は適当なディレクトリで`Makefile`として置いておく．
 * `slide.tex` を適当にエディットする．
 * 発表用スライドにデザインされた，`beamer` というクラスを用いて，
 2つのテーマ，`metropolis` および `focus` 用に例題を記述しておいた．
-
+* コンパイルは `latexmk` を用いると楽だろう．`.latexmkrc` は例えば
+以下とすればよい(Mac用):
+```text
+$pdflatex      = 'xelatex %O %S && cp %D ~/Desktop';
+$pdf_previewer = 'open -a Preview.app ~/Desktop/%S';
+$bibtex        = 'pbibtex %O %S';
+$bibtex_use    = 2;
+$pdf_mode      = 1; # dvi->pdf
+$dvi_mode      = 0;
+$clean_ext = '%R.nav %R.snm %R.vrb';
+```
 
 ## ちょっとした資料用テンプレート `docsample.tex`
 
@@ -132,6 +139,15 @@ plt.show()
 
 ### 使い方
 
-* `platex`  でコンパイルする用に記述してある．`dvipdfmx` によってPDFを
-生成させる必要がある．
-
+* `docsample.tex` を適当に編集する．
+* コンパイルは `latexmk` を用いると楽だろう．`.latexmkrc` は例えば
+以下とすればよい(Mac用):
+```text
+$latex         = 'platex --shell-escape -halt-on-error';
+$dvipdf        = 'dvipdfmx %O -o %D %S && cp %D ~/Desktop';
+$pdf_previewer = 'open -a Preview.app ~/Desktop/%S';
+$bibtex        = 'pbibtex %O %S';
+$bibtex_use    = 2;
+$pdf_mode      = 3; 
+$clean_ext     = '%R.nav %R.snm %R.vrb %R.tex.bak';
+```
