@@ -120,7 +120,7 @@ plt.show()
 ```
 ### 実行方法
 ```
-% python plot_data.py
+% python plot_file.py
 ```
 
 ## スライド作成用テンプレート `slide.tex` 
