@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
 params = {'text.usetex': True,
-          #'text.latex.preamble': r'\usepackage{newtxtext,newtxmath}',
+          'text.latex.preamble': r'\usepackage{newtxtext,newtxmath}',
           'legend.fontsize': 12, 'axes.labelsize': 12,
           'axes.titlesize': 12, 'xtick.labelsize' :12,
           'ytick.labelsize': 12, 'font.family': 'serif',
           'grid.color': 'k', 'grid.linestyle': ':',
           'grid.linewidth': 0.5,
          }
-plt.rcParams.update(params)
+# plt.rcParams.update(params)
 
 x_list=[] 
 y_list=[] 
@@ -27,7 +27,7 @@ for line in fd:
 
 fig = plt.figure(figsize = (5, 5/16*5))		# create a figure
 ax = fig.add_subplot(111)					# create axes 
-fig.subplots_adjust(bottom=0.3)
+fig.subplots_adjust(bottom=0.3, left=0.15)
 
 # PLOT options 
 plt.xticks(fontsize=10) 
