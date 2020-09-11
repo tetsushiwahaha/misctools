@@ -1,17 +1,17 @@
 \documentclass[11pt, a4j]{jsarticle}
 
-\title{\textbf{タイトル}}
-\author{著者名 \thanks{\texttt{mailaddr@tokushima-u.ac.jp}}}
+% あまり余白の調整はしないほうがいい
+
 
 \usepackage{newtxtext,newtxmath}
 \usepackage{ascmac}
 \usepackage{setspace}
 \usepackage{enumitem}
-\usepackage{listings}
+\usepackage{listings,jlisting}
 \usepackage{bm}
-\renewcommand{\baselinestretch}{1.0}
-
 \usepackage[dvipdfmx]{graphicx, xcolor}
+
+%\renewcommand{\baselinestretch}{1.0}
 
 \usepackage[dvipdfmx,
     colorlinks=true, 
@@ -50,53 +50,61 @@
   lineskip=-0.5ex%
 }
 
+\title{\textbf{タイトル}}
+\author{著者名 \thanks{\texttt{mailaddr@tokushima-u.ac.jp}}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-概要をここに書く
+概要を，必要ならばここに書く
 \end{abstract}
 
 \tableofcontents
 
 \section{最初のセクション}
 
+コードリストはこんな感じ
+\begin{lstlisting}
+% whoami
+tetsushi
+\end{lstlisting}
+
+\appendix 
+
 \section{次のセクション}
 
 
-
 \begin{thebibliography}{9}
-\bibitem{ipsj}
-情報処理学会，
-``著作権に関するよくある質問,''
+\bibitem{one}
+% 論文の場合．
+% 姓と名の間に半角スペース
+著者 姓名, 著者 姓名,
+``コンマは引用符の中に入れる,''
+雑誌名,
+Vol. xx, No. xx, pp. xx--xx, 月, 西暦. 
+DOI:xxxxxx
+%
+% 著書の場合
+% 本のタイトルは引用符ではくくらない
+\bibitem{two}
+姓 名，本のタイトル，出版社, 出版社の所在地，西暦.
+%
+\bibitem{three}
+% URLだけ示す例 閲覧日を記述する．
 \url{https://www.ipsj.or.jp/faq/chosakuken-faq.html}
-（2020年6月24日閲覧）
-\bibitem{enago}
-エナゴ技術英語アカデミー，
-``論文の盗用・剽窃を避けるコツ(前後編),''
-\url{https://www.enago.jp/academy/how-to-avoid-plagiarism1/}
 （2020年6月24日閲覧）
 %
 \bibitem{oda}
-小田忠雄，``数学の常識・非常識---由緒正しい\TeX 入力法,''
+小田 忠雄，``数学の常識・非常識---由緒正しい\TeX 入力法,''
 数学通信，Vol. 4, No. 1, pp. 95--112, May 1999.
-長年著者が参照していたドキュメント．数式が多い人は是非読んでください．
-2節から論文の書き方になっているが，実に参考になる．
-英語で書く人は3節が実に役に立つ．
 \url{http://www.math.tohoku.ac.jp/tmj/oda_tex.pdf}
-%{http://www.math.tohoku.ac.jp/tmj/oda\_tex.pdf}
 %
-\bibitem{oldlatex}
-丸田一郎，``使ってはいけない\LaTeX のコマンド・パッケージ・作法,''
-私も知らない使い方が載ってます…
-\url{https://ichiro-maruta.blogspot.com/2013/03/latex.html}
-%{
-%http://ichiro-maruta.blogspot.jp/2013/03/latex.html
-%}
-\bibitem{yagiura}
-\url{http://www.hirata.nuee.nagoya-u.ac.jp/~yagiura/writing/writing.html}
 \end{thebibliography}
+
+% bibtex を使う場合
+%\bibliographystyle{jplain}
+%\bibliography{main}
 
 \end{document}
 %
