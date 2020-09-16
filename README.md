@@ -82,6 +82,7 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 例としてロジスティック方程式を実装しているので，
 適当に `func()` の定義などを変更するとよい．
 過渡応答を捨てるための回数は`idle` で調整．
+グラフはPDFにダンプされる．
 
 ### 必要なもの
 * python 3.8 or later
@@ -92,9 +93,6 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 ```
 % python onedimbif.py
 ```
-### 出力
-グラフが表示されるとともに，カレントディレクトリに
-グラフをダンプした`snapshot.pdf` というファイルが生成される．
 
 
 ## スライド作成用テンプレート `slide.tex` 
