@@ -74,8 +74,7 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 % python plot_file.py
 ```
 
-## 1次元分岐図作成ツール
-
+## 1次元分岐図作成ツール `onedimbif.py`
 
 ![Figure: Logistics equation](https://user-images.githubusercontent.com/52724526/93320317-e49dbd80-f84b-11ea-8cb2-cb238b184252.png)
 
