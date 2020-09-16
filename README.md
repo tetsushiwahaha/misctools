@@ -76,11 +76,12 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 
 ## 1次元分岐図作成ツール
 
+
+![Figure: Logistics equation](https://user-images.githubusercontent.com/52724526/93320317-e49dbd80-f84b-11ea-8cb2-cb238b184252.png)
+
 例としてロジスティック方程式を実装しているので，
 適当に `func()` の定義などを変更するとよい．
-
-![Figure_1](https://user-images.githubusercontent.com/52724526/93320317-e49dbd80-f84b-11ea-8cb2-cb238b184252.png)
-
+過渡応答を捨てるための回数は`idle` で調整．
 
 ### 必要なもの
 * python 3.8 or later

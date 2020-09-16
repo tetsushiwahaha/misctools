@@ -71,6 +71,7 @@ ax.plot(x_list, y_list, 'o', markersize = 0.2,
 	color = "black", alpha = 0.2)
 
 ax.grid(c='gainsboro', zorder=1)
+plt.show()
 
 # Publish a PDF in the same time.
 #
@@ -78,4 +79,3 @@ pdf = PdfPages('snapshot.pdf')
 pdf.savefig()
 pdf.close()
 
-plt.show()
