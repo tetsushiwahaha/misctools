@@ -21,6 +21,7 @@ params = {'text.usetex': True,
 plt.rcParams.update(params)
 
 idle = 300
+mapmax = 500
 amin = 2.5
 amax = 4.0
 
@@ -41,41 +42,41 @@ ax.set_ylabel(r'$\varphi(k) \longrightarrow $', fontsize=14)
 ax.set_xlim([amin, amax])
 ax.set_ylim([0., 1.0])
 
-# resolution 0.0001 is fine
-#
+resolution = 0.001
 
-a_list = np.arange(amin, amax, 0.001)
+a_list = np.arange(amin, amax, resolution)
 x_list = []
 y_list = []
 
-# mapmax ranges up to 300
-#
-
-maxmap = 100
 x0 = 0.2
 
 for a in a_list:
 	for i in range(idle):
 		x = func(a, x0)
 		x0 = x
-	for i in range(maxmap):
+	for i in range(mapmax):
 		x = func(a, x0)
 		x_list.append(a)
 		y_list.append(x)
 		x0 = x
 
 print("computation complete")
-print("computed  {0} points".format(len(y_list)))
+print("computed {0} points".format(len(y_list)))
 
 ax.plot(x_list, y_list, 'o', markersize = 0.2, 
 	color = "black", alpha = 0.2)
 
 ax.grid(c='gainsboro', zorder=1)
-plt.show()
+
+plt.pause(0.001)	# flush current graphics
 
 # Publish a PDF in the same time.
+# Taking much time to flush data into a PDF if mapmax is large
 #
+
 pdf = PdfPages('snapshot.pdf')
 pdf.savefig()
 pdf.close()
+
+plt.show() 	# keep appearance 
 
