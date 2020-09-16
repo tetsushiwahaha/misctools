@@ -74,6 +74,27 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 % python plot_file.py
 ```
 
+## 1次元分岐図作成ツール
+
+例としてロジスティック方程式を実装しているので，
+適当に `func()` の定義などを変更するとよい．
+
+![Figure_1](https://user-images.githubusercontent.com/52724526/93320317-e49dbd80-f84b-11ea-8cb2-cb238b184252.png)
+
+
+### 必要なもの
+* python 3.8 or later
+	* matplotlib, numpy
+* TeXLive 
+
+### 実行方法
+```
+% python onedimbif.py
+```
+### 出力
+グラフが表示されるとともに，カレントディレクトリに
+グラフをダンプした`snapshot.pdf` というファイルが生成される．
+
 
 ## スライド作成用テンプレート `slide.tex` 
 
@@ -115,3 +136,5 @@ $bibtex_use    = 2;
 $pdf_mode      = 3; 
 $clean_ext     = '%R.nav %R.snm %R.vrb %R.tex.bak';
 ```
+
+
