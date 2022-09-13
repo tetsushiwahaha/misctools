@@ -1,0 +1,112 @@
+\documentclass[a4j]{jsarticle}
+
+\usepackage{newtxtext,newtxmath}
+\usepackage{ascmac}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{listings,jlisting}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx, xcolor}
+\usepackage[top=25mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+
+%\renewcommand{\baselinestretch}{1.0}
+
+\usepackage[dvipdfmx,
+	bookmarksopen=true,  
+    bookmarksopenlevel=3, bookmarks=true, 
+    bookmarksnumbered=true,
+    pdftitle={a guide},            
+    pdftoolbar=true, pdfmenubar=true,
+    pdfwindowui=true, pdffitwindow=false,
+    pdfpagelayout=SinglePage,
+    colorlinks=true, 
+    linkcolor=blue,  %linkcolor=black, 
+    urlcolor=blue,   %urlcolor=black,  
+    citecolor=blue,   %citecolor=black,  
+    bookmarkstype=toc
+]{hyperref}
+
+\usepackage{pxjahyper}
+
+\lstset{%
+  language={C},
+  basicstyle={\ttfamily},%
+  identifierstyle={\small},%
+  commentstyle={\small\itshape},%
+  keywordstyle={\small\bfseries},%
+  ndkeywordstyle={\small},%
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex%
+}
+
+\title{\textbf{タイトル}}
+\author{著者名 \thanks{\texttt{mailaddr@tokushima-u.ac.jp}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+概要を，必要ならばここに書く
+\end{abstract}
+
+% 長い内容になるようならば，目次を入れたらいいかも
+%\tableofcontents
+
+\section{最初のセクション}
+
+コードリストはこんな感じ
+\begin{lstlisting}
+% whoami
+tetsushi
+% date
+2021年 6月 8日 火曜日 14時19分56秒 JST
+\end{lstlisting}
+
+\section{次のセクション}
+
+\appendix 
+
+\section{ここは付録}
+
+\begin{thebibliography}{9}
+\bibitem{one}
+% 論文の場合．
+% 姓と名の間に半角スペース
+著者 姓名, 著者 姓名,
+``コンマは引用符の中に入れる,''
+雑誌名,
+Vol. xx, No. xx, pp. xx--xx, 月, 西暦. 
+DOI:xxxxxx
+%
+% 著書の場合
+% 本のタイトルは引用符ではくくらない
+\bibitem{two}
+姓 名，本のタイトル，出版社, 出版社の所在地，西暦.
+%
+\bibitem{three}
+% URLだけ示す例 閲覧日を記述する．
+\url{https://www.ipsj.or.jp/faq/chosakuken-faq.html}
+（2020年6月24日閲覧）
+%
+\bibitem{oda}
+小田 忠雄，``数学の常識・非常識---由緒正しい\TeX 入力法,''
+数学通信，Vol. 4, No. 1, pp. 95--112, May 1999.
+\url{http://www.math.tohoku.ac.jp/tmj/oda_tex.pdf}
+%
+\end{thebibliography}
+
+% bibtex を使う場合
+%\bibliographystyle{jplain}
+%\bibliography{main}
+
+\end{document}
+%

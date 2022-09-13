@@ -1,0 +1,128 @@
+\documentclass[unicode,12pt,aspectratio=169]{beamer}
+%\usepackage[orientation=landscape, size=a0, scale=1.4]{beamerposter}
+% 10, 11, 12, 14, 17, 20 available
+
+%%% slide design %%%
+%\usetheme[progressbar=frametitle]{metropolis}
+\usetheme[progressbar=frametitle]{focus}
+%%%% for focus theme
+\definecolor{main}{RGB}{22, 53, 123}
+\definecolor{background}{RGB}{240, 247, 255}
+\setbeamercolor{progress bar}{fg=red}
+\setbeamercolor{block body}{bg=yellow!30!white}
+%%%% for metropolis theme
+\definecolor{mDarkBrown}{HTML}{000099}
+\definecolor{mDarkTeal}{HTML}{000055}
+\definecolor{mLightBrown}{HTML}{EB000B}
+\definecolor{mLightGreen}{HTML}{14B03D}
+%\definecolor{mLightBrown}{HTML}{EB811B}
+%\definecolor{mDarkBrown}{HTML}{604c38}
+%\definecolor{mDarkTeal}{HTML}{23373b}
+
+%%%% Font setting %%%%
+\usepackage{zxjatype}
+%\usepackage[hiragino-pro]{zxjafont}
+%\usepackage[morisawa-pr6n]{zxjafont}
+%\usepackage[kozuka-pro]{zxjafont}
+%\usepackage[hiragino-pron]{zxjafont}
+%\usepackage[hiragino-pro]{zxjafont}
+%\setCJKmainfont[Scale=0.95]{Meiryo}
+\setCJKmainfont[Scale=0.95]{BIZ UDGothic}
+\setsansfont[
+  BoldFont={Fira Sans SemiBold},
+  ItalicFont={Fira Sans Italic},
+  BoldItalicFont={Fira Sans SemiBold Italic}
+]{Fira Sans}
+
+%%%% PACKAGES %%%%
+\usepackage{bxdpx-beamer}	% for dvipdfmx
+\usepackage{multicol}
+\usepackage[euler-digits]{eulervm}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{listings,jlisting} 
+\lstset{language={C},
+	basicstyle=\ttfamily\footnotesize,
+	commentstyle=\textit, classoffset=1,
+	frame=tRBl, framesep=5pt,
+	numbers=left, stepnumber=1,
+	numberstyle=\footnotesize, tabsize=2,
+	escapechar=!
+}
+
+\usepackage{metalogo}
+\usepackage{hyperref}
+\hypersetup{ colorlinks=true, urlcolor=blue, }
+%\usepackage{ascmac}
+%\usepackage{slashbox}
+%\usepackage{amsmath}
+%\usepackage{bxascmac}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{9月以降の研究室運営}
+\subtitle{---予想不能な将来に対して行動計画を立てるのだ---}
+\author[T. Ueta]{上田 哲史}
+\institute{徳島大学 情報センター}
+\date{\today}
+
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\section{9月に入るので}
+
+\begin{frame}{スケジュール合わせ}
+\begin{itemize}
+\item 金曜10:30〜のゼミは9月内は実施するが，後期では改めて各自のスケジュ
+ールを合わせて，確実に全員が（オンラインで）集まる時間を決定．
+\item ウエタは以下の授業を予定しているので，
+これらのある曜日以外だとうれしい．\par
+
+\centering
+\begin{tabular}{ccc}
+月曜日 & 10:25〜11:55 & 電子回路 \\
+火曜日 & 8:40〜10:10 & 技術英語 \\
+金曜日 & 14:35〜17:30 & 電気回路 \\
+\end{tabular}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{報告会での提示資料}
+\begin{itemize}
+\item オンラインの説明になるので，説明スライドが必要．
+\item \LaTeX を使う練習はしてほしいところだが…
+\item 何をどこまで取り組んでいて，どこにひっかかってるのか，合理的な時間
+内にウエタが必要な指示を出せるよう，できるだけ豊富な情報を提示せよ
+\item \textbf{数行しかないような報告は今後禁止．}
+何も提示するものがなければオリジ
+ナルのポエムでも発表せよ
+\item いちいちスクショなどを\LaTeX に貼り付けるのは面倒だろう．
+プレゼンとして一本のPDFを作ることにこだわらなくていいので，
+とにかくTeamsの画面共有として出して意義のあるデータを用意すること
+\end{itemize}
+\end{frame}
+
+\begin{frame}{コード共有}
+あんまし個々の人のコードは見たくない気もするが，ま，今年はオンラインで卒
+研突破まで考えるので…
+\begin{itemize}
+\item Dropboxをインストールし，その中で開発
+\item \texttt{git} コマンドを使えるようにする．ターゲットとなるプロジェクト
+単位でディレクトリを掘って，そこで\texttt{git commit} できるようにする
+\item github にてアカウントを取得．\texttt{git push origin master}で
+同期できるよう整備する．
+\item 全部オープンなのもアレなので，A6 B研内部でのみ共有できるようになら
+ないか？
+\end{itemize}
+以上のことが何のことか分からなければ，天羽に聞く！
+\end{frame}
+
+\end{document}
