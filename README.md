@@ -94,13 +94,13 @@ LaTeXのソースから`\includegraphics{}` で参照する．matplotlib
 ```
 
 
-## スライド作成用テンプレート `slide.tex` 
+## スライド作成用テンプレート `slidesample.tex` 
 
 ### 必要なもの
 * TeXLive を入れてあれば特に問題ない
 
 ### 使い方
-* `slide.tex` を適当にエディットする．
+* `slidesample.tex` を適当にエディットする．
 * 発表用スライドにデザインされた，`beamer` というクラスを用いて，
 2つのテーマ，`metropolis` および `focus` 用に例題を記述しておいた．
 * コンパイルは `latexmk` を用いると楽だろう．`.latexmkrc` は例えば
